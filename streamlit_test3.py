@@ -167,5 +167,5 @@ if st.button("Run Script"):
                line = line[:-2]
                total_lines = total_lines.append(line)
      for line in total_lines:
-          print(line[2:12])
+          st.write(line[2:12])
           
