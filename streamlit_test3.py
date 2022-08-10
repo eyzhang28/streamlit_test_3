@@ -17,7 +17,7 @@ st.write('Please upload the proofs in the first uploader and the State Contact S
 
 proofs_data = st.file_uploader("Upload Proofs PDF", type=["pdf"])
 state_data = st.file_uploader("Upload the State Contact Info Sheet")
-path = st.text_input("Input print file path")
+print_datas = st.file_uploader("Upload Print Files", type=["txt"], accept_multiple_files = True)
 
 
 total_lines = []
@@ -162,10 +162,8 @@ def compare_dict(df6, proofs_dictionary):
 if st.button("Run Script"):
      st.write("test")
      total_lines = []
-     for i in glob.glob(r'\\199.221.111.170\qcom\QCEW Proof Review Team\ARS\Print Files\FY 22 - NVS 1st Mailing\*.txt'):
+     for print_data in print_datas:
           lines = []
-          with open(i) as f:
-               lines = f.readlines()
-               total_lines = total_lines + lines
-     st.write(total_lines[0])
+          lines = print_data.readlines()
+          st.write(lines)
         
