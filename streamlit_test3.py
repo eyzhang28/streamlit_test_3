@@ -163,5 +163,5 @@ if st.button("Run Script"):
      st.write("test")
      total_lines = []
      for print_data in print_datas:
-          contents = print_data.read()
+          contents = str(print_data.read(), "utf-8")
           st.write(contents)
