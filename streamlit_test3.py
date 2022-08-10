@@ -164,5 +164,6 @@ if st.button("Run Script"):
      total_lines = []
      for print_data in print_datas:
           for line in print_data:
+               line = line[2:-4]
                st.write(line)
         
