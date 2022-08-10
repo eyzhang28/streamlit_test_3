@@ -165,7 +165,7 @@ if st.button("Run Script"):
      for print_data in print_datas:
           for line in print_data:
                line = str(line[:-2])
-               total_lines = total_lines + line
+               total_lines.append(line)
      UI_Number_list = []
      Trade_Name_list = []
      Legal_Name_list = []
