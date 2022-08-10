@@ -163,4 +163,4 @@ if st.button("Run Script"):
      st.write("test2")
      with open(r'\\199.221.111.170\qcom\QCEW Proof Review Team\ARS\Print Files\FY 22 - NVS 1st Mailing\DCCARS.YR22.NVS.F01.txt') as f:
           lines = f.readlines()
-     st.write(lines)
+     st.write("test3")
