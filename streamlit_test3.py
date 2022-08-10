@@ -165,4 +165,4 @@ if st.button("Run Script"):
      for print_data in print_datas:
           st.write(print_data)
           lines = print_data.readlines()
-          st.write(lines)
+          st.write(lines[0])
