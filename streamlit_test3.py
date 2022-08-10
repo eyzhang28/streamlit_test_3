@@ -165,5 +165,6 @@ if st.button("Run Script"):
      for print_data in print_datas:
           for line in print_data:
                line = str(line[:-2])
-               st.write(line[2:])
+               total_lines = total_lines + line
+          
           
