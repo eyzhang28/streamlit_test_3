@@ -160,11 +160,12 @@ def compare_dict(df6, proofs_dictionary):
                 st.write('Different Trade Name')
 
 if st.button("Run Script"):
+     
     total_lines = []
     for i in glob.glob(r'\\199.221.111.170\qcom\QCEW Proof Review Team\ARS\Print Files\FY 22 - NVS 1st Mailing\*.txt'):
         lines = []
         with open(i) as f:
             lines = f.readlines()
         total_lines = total_lines + lines
-    print(total_lines[0])
+    st.write(total_lines[0])
         
