@@ -158,6 +158,7 @@ def compare_dict(df6, proofs_dictionary):
             else:
                 st.write('Different Trade Name')
 if st.button("Run Script"):
+     st.write(test)
      df = pd.read_csv(print_data)
      st.write(df)
     
