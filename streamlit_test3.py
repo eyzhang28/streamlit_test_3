@@ -17,8 +17,7 @@ st.write('Please upload the proofs in the first uploader and the State Contact S
 
 proofs_data = st.file_uploader("Upload Proofs PDF", type=["pdf"])
 state_data = st.file_uploader("Upload the State Contact Info Sheet")
-print_datas = st.file_uploader("Upload Print Files", type=["txt"], accept_multiple_files = True)
-
+print_data = st.file_uploader("Upload Print Files", type=["csv"])
 
 total_lines = []
 def string_cleaning(s):
@@ -160,7 +159,5 @@ def compare_dict(df6, proofs_dictionary):
                 st.write('Different Trade Name')
 
 if st.button("Run Script"):
-     st.write("test2")
-     with open(r'\\199.221.111.170\qcom\QCEW Proof Review Team\ARS\Print Files\FY 22 - NVS 1st Mailing\DCCARS.YR22.NVS.F01.txt') as f:
-          lines = f.readlines()
-     st.write("test3")
+     df = pd.read_csv(print_data)
+     st.write(df['Password'].iloc[0])
